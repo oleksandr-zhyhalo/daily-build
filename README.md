@@ -14,7 +14,7 @@ This GitHub Action checks for commits in the past 24 hours on a specified branch
 
 ### `error-on-no-commits`
 
-**Optional** If set to `'true'`, the action will fail if no commits are found in the last 24 hours. This is useful if you want to halt the workflow in cases where there are no new changes. Default: `'false'`.
+**Optional** If set to `'false'`, the action will **not fail** if no commits are found in the last 24 hours. This is useful if you want to halt the workflow in cases where there are no new changes. Default: `'true'`.
 
 ## Outputs
 
@@ -33,7 +33,7 @@ steps:
 
 - name: Check for Recent Commits
   id: commit-check
-  uses: your-username/daily-commit-checker@v1
+  uses: oleksandr-zhyhalo/daily-build@v1.0.0
   with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
     branch: 'main'
