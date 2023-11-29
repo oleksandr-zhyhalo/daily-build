@@ -14,4 +14,4 @@ inputs:
     default: 'true' # Default to false to maintain backward compatibility
 runs:
   using: 'node20'
-  main: 'index.js'
+  main: 'dist/index.js'
