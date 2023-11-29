@@ -1,0 +1,21 @@
+name: Daily Build Test
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  DailyBuild:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Check for Recent Commits
+      id: commit-check
+      uses: oleksandr-zhyhalo/daily-build@v1.0.1
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        branch: 'main'
+        error-on-no-commits: 'false'
+    - name: Subsequent Step
+      if: steps.commit-check.outputs.has_recent_commits == 'true'
+      run: |
+        echo "Found recent commits!"
