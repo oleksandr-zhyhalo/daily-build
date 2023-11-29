@@ -33,7 +33,7 @@ steps:
 
 - name: Check for Recent Commits
   id: commit-check
-  uses: oleksandr-zhyhalo/daily-build@v1.0.3
+  uses: oleksandr-zhyhalo/daily-build@v1.0.4
   with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
     branch: 'main'

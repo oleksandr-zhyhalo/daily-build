@@ -1,6 +1,6 @@
 {
   "name": "daily-build",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Github Action to run daily builds",
   "main": "index.js",
   "scripts": {
