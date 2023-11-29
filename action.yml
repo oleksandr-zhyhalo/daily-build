@@ -1,0 +1,17 @@
+name: 'Daily Commit Checker'
+description: 'Check for commits in the past 24 hours on a specified branch'
+inputs:
+  github-token:
+    description: 'GitHub token'
+    required: true
+  branch:
+    description: 'The branch to check for recent commits'
+    required: true
+    default: 'main'
+  error-on-no-commits:
+    description: 'If true, the action will fail if no commits are found in the last 24 hours'
+    required: false
+    default: 'true' # Default to false to maintain backward compatibility
+runs:
+  using: 'node20'
+  main: 'index.js'
