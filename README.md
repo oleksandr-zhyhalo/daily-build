@@ -1,4 +1,4 @@
-# Daily Commit Checker
+# Daily Build
 
 This GitHub Action checks for commits in the past 24 hours on a specified branch of your repository. It's designed to be used in workflows where you need to determine if there have been any recent changes to a branch.
 
@@ -60,7 +60,7 @@ steps:
       # Steps to run if there are new commits
 ```
 
-In this configuration, if the Daily Commit Checker finds no new commits and `error-on-no-commits` is set to `false`, the Subsequent Step will be skipped, effectively ending the workflow gracefully without any errors.
+In this configuration, if the Daily Build finds no new commits and `error-on-no-commits` is set to `false`, the Subsequent Step will be skipped, effectively ending the workflow gracefully without any errors.
 
 ## Example Use-Cases
 * Automated Builds: Trigger a build only if there have been changes to the source code in the past day.

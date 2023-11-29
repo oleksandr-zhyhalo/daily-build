@@ -1,4 +1,4 @@
-name: 'Daily Commit Checker'
+name: 'Daily Build'
 description: 'Check for commits in the past 24 hours on a specified branch'
 inputs:
   github-token:
